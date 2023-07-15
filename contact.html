@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafena</title>
+
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo">
+            <img src="images/logo.png" alt="">
+        </a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="menu.html">menu</a>
+            <a href="products.html">products</a>
+            <a href="about.html">about</a>
+            <a href="review.html">review</a>
+            <a href="#" class="active">contact</a>
+            <a href="blog.html">blogs</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="images/cart-item-1.png" alt="">
+                <div class="content">
+                    <h3>cart item 01</h3>
+                    <div class="price">$16.99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="images/cart-item-2.png" alt="">
+                <div class="content">
+                    <h3>cart item 02</h3>
+                    <div class="price">$16.99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="images/cart-item-3.png" alt="">
+                <div class="content">
+                    <h3>cart item 03</h3>
+                    <div class="price">$16.99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="images/cart-item-4.png" alt="">
+                <div class="content">
+                    <h3>cart item 04</h3>
+                    <div class="price">$16.99/-</div>
+                </div>
+            </div>
+            <a href="#" class="btn">checkout now</a>
+        </div>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"> <span>contact</span> us </h1>
+
+        <div class="row">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.857035463462!2d-79.37477960738086!3d43.671943049664215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb538b955555%3A0x718c47779069f22c!2sGeorgian%40ILAC!5e0!3m2!1sen!2sca!4v1681235661724!5m2!1sen!2sca"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <form>
+                <h3>get in touch with us</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="Name">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="E-mail">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-pen"></span>
+                    <input type="text" placeholder="Subject">
+                </div>
+                <input type="submit" value="contact now" class="btn">
+            </form>
+
+        </div>
+        <script>
+            document.querySelector('.contact form').addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent the form from refreshing the page
+
+                // Get the input values
+                const name = document.querySelector('.contact input[type="text"]').value;
+                const email = document.querySelector('.contact input[type="email"]').value;
+                const subject = document.querySelector('.contact input[type="text"][placeholder="Subject"]').value;
+
+                // Validate the input fields
+                if (name && email && subject) {
+                    const message = document.createElement('p');
+                    message.textContent = 'Thanks for contacting us! We will get back to you soon.';
+                    message.style.color = 'white';
+                    message.style.marginTop = '1rem';
+                    message.style.fontSize = '1.5rem'; // Add this line to increase the font size of the message
+
+                    // Append the message below the contact button
+                    document.querySelector('.contact form').appendChild(message);
+                }
+            });
+        </script>
+
+
+
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- footer section starts  -->
+    <section class="footer">
+        <div class="social-icons">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+        <div class="footer-col">
+            <h4>Top Menus</h4>
+            <li><a href="#">Iced Capp</a></li>
+            <li><a href="#">Macchiato</a></li>
+            <li><a href="#">Frappuccino</a></li>
+            <li><a href="#">Espresso</a></li>
+        </div>
+        <div class="footer-col">
+            <h4>Top Products</h4>
+            <li><a href="#">Dalgona</a></li>
+            <li><a href="#">Robusta</a></li>
+            <li><a href="#">Liberica</a></li>
+            <li><a href="#">Excelsa</a></li>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </div>
+        <div class="footer-col">
+            <h4>Terms & Conditions</h4>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Conditions</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Policy</a></li>
+        </div>
+        <div class="credit">&copy 2023 created by <span>Patels</span> | All Rights are reserved</div>
+    </section>
+    <!-- footer section ends -->
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
